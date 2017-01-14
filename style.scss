@@ -217,8 +217,15 @@ nav {
 	&:hover{
 		color: $colorBG2;
 		border-color: $colorBG2;
+		text-shadow: 0 0 1px $colorBG2;
 		text-decoration: none;
 	}
+}
+
+.main-menu li a.li_active {
+	color: $colorBG2;
+	border-color: $colorBG2;
+	text-shadow: 0 0 1px $colorBG2;
 }
 
 .main-menu .hidd-col-sm,
@@ -343,6 +350,7 @@ input[type="search"]::-webkit-search-cancel-button {
 		padding: 15px 20px;
 		margin-top: 0;
 		font-size: 36px;
+		width: 350px;
 	}
 }
 
@@ -590,5 +598,83 @@ footer .f-b-last {
 		color: #b3b3b3;
 		font-size: 9px;
 		padding: 10px 0 0 0;
+	}
+}
+
+
+
+
+
+/*--------------EVENTS-------------*/
+
+.events {
+	margin-top: 30px;
+		
+	.event_block {
+		margin-bottom: 15px; 
+			@media screen and (min-width: 520px) {
+				width: calc(50% - 10px);
+				float: left;
+				margin-right: 10px;
+			}
+			@media screen and (min-width: 960px) {
+				width: 32%;
+				margin-right: 2%;
+			}
+
+
+		a {
+			text-decoration: none;
+			display: block;
+
+			&:hover {
+				box-shadow: 0 0 15px $colorBG2;
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.events div:nth-child(even) {
+	@media screen and (min-width: 520px) {
+		margin-right: 0;
+		float: right;
+	}
+	@media screen and (min-width: 960px) {
+		margin-right: 2%;
+		float: left;
+	}
+}
+
+.events div:nth-child(3n+3) {
+	@media screen and (min-width: 960px) {
+		margin-right: 0;
+	}
+}
+
+h2.event_title {
+	background: $textColorTab;
+	color: white;
+	text-transform: uppercase;
+	margin-top: 0;
+	font-size: 20px;
+	line-height: 2;
+	padding-left: 7px;
+
+	.data {
+		display: inline-block;
+		float: right;
+		background: $textColor1;
+		text-align: center;
+		line-height: 1;
+		font-size: 18px;
+		padding: 2px 7px;
+	}
+
+	.norm {
+		text-transform: none;
 	}
 }
