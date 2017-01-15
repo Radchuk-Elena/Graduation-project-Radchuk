@@ -73,16 +73,14 @@ nav {
   background: #668333;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  cursor: pointer;
-  /*padding: 0.7em;*/ }
+  cursor: pointer; }
   @media screen and (min-width: 768px) {
     nav {
       width: auto;
       height: auto;
       float: right;
       margin: 0;
-      background: none;
-      /*padding: 0;*/ } }
+      background: none; } }
   nav:hover {
     box-shadow: 0 0 15px #4999af; }
     @media screen and (min-width: 768px) {
@@ -113,7 +111,7 @@ nav {
       background: #4999af;
       -webkit-border-radius: 0;
       border-radius: 0;
-      padding: 0 16px 0 0;
+      padding: 6px 16px 0 0;
       cursor: pointer;
       opacity: 0.8;
       position: relative; } }
@@ -484,38 +482,41 @@ footer .f-b-last {
     padding: 10px 0 0 0; }
 
 /*--------------EVENTS-------------*/
-.events {
+.events, .shop {
   margin-top: 30px; }
-  .events .event_block {
+  .events .event_block, .shop .event_block, .events .shop_block, .shop .shop_block {
     margin-bottom: 15px; }
     @media screen and (min-width: 520px) {
-      .events .event_block {
+      .events .event_block, .shop .event_block, .events .shop_block, .shop .shop_block {
         width: calc(50% - 10px);
         float: left;
         margin-right: 10px; } }
     @media screen and (min-width: 960px) {
-      .events .event_block {
+      .events .event_block, .shop .event_block, .events .shop_block, .shop .shop_block {
         width: 32%;
         margin-right: 2%; } }
-    .events .event_block a {
+    .events .event_block a, .shop .event_block a, .events .shop_block a, .shop .shop_block a {
       text-decoration: none;
       display: block; }
-      .events .event_block a:hover {
+      .events .event_block a:hover, .shop .event_block a:hover, .events .shop_block a:hover, .shop .shop_block a:hover {
         box-shadow: 0 0 15px #4999af; }
-    .events .event_block img {
+    .events .event_block img, .shop .event_block img, .events .shop_block img, .shop .shop_block img {
       width: 100%; }
 
 @media screen and (min-width: 520px) {
-  .events div:nth-child(even) {
+  .events div:nth-child(even), .shop div:nth-child(even),
+  .shop div:nth-child(even) {
     margin-right: 0;
     float: right; } }
 @media screen and (min-width: 960px) {
-  .events div:nth-child(even) {
+  .events div:nth-child(even), .shop div:nth-child(even),
+  .shop div:nth-child(even) {
     margin-right: 2%;
     float: left; } }
 
 @media screen and (min-width: 960px) {
-  .events div:nth-child(3n+3) {
+  .events div:nth-child(3n+3), .shop div:nth-child(3n+3),
+  .shop div:nth-child(3n+3) {
     margin-right: 0; } }
 
 h2.event_title {
@@ -536,5 +537,26 @@ h2.event_title {
     padding: 2px 7px; }
   h2.event_title .norm {
     text-transform: none; }
+
+/*--------------SHOP-------------*/
+.shop_block img {
+  box-shadow: inset 0 0 7px #ddd3cc; }
+
+h2.shop_title {
+  background: #f1715e;
+  color: white;
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 2;
+  padding-left: 7px; }
+  h2.shop_title .price {
+    display: inline-block;
+    float: right;
+    background: #4999af;
+    text-align: center;
+    line-height: 2;
+    font-size: 18px;
+    padding: 0 7px;
+    height: 100%; }
 
 /*# sourceMappingURL=style.css.map */
