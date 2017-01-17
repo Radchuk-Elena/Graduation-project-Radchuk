@@ -340,6 +340,7 @@ input[type="search"]::-webkit-search-cancel-button {
 	background: $colorBG2;
 	margin-top: 10px;
 	font-size: 26px;
+	font-weight: bold;
 
 	@media screen and (min-width: 768px) {	
 		position: absolute;
@@ -670,7 +671,7 @@ h2.event_title {
 	line-height: 2;
 	padding-left: 7px;
 
-	.data {
+	.date {
 		display: inline-block;
 		float: right;
 		background: $textColor1;
@@ -725,3 +726,285 @@ h2.shop_title {
 		height: 100%;
 	}
 }
+
+
+
+
+
+/*--------------MEDIA-------------*/
+.header_title_media {
+	@extend .header_title;
+
+	@media screen and (min-width: 768px) {	
+		width: 450px;
+	}
+}
+
+.header_title span{
+	font-size: 22px;
+
+	@media screen and (min-width: 768px) {
+		font-weight: normal;
+		font-size: 32px;
+	}
+}
+
+.media_oaks {
+	margin-top: 30px;
+}
+
+.media_block {
+	position: relative;
+	text-align: right;
+	margin-bottom: 15px; 
+
+	@media screen and (min-width: 720px) {
+		width: 32.5%;
+		float: left;
+		margin-right: 1%;
+	}
+
+	@media screen and (min-width: 1100px) {
+		width: 32%;
+		margin-right: 2%;
+	}
+
+	a {
+		text-decoration: none;
+		display: block;
+
+		&:hover {
+			box-shadow: 0 0 15px $colorBG2;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.media_title {
+		color: white;
+		font-size: 36px;
+		line-height: 1;
+		text-transform: uppercase;
+		text-shadow: 0 0 3px $logoColor;
+		font-weight: bold;
+		position: absolute;
+		bottom: 45px;
+		right: 10px;
+
+		@media screen and (min-width: 768px) {
+			font-size: 33px;
+		}
+
+		@media screen and (min-width: 960px) {
+			font-size: 36px;
+		}
+	}
+
+	.comment {
+		color: white;
+		font-size: 18px;
+		position: absolute;
+		bottom: -10px;
+		right: 0;
+		line-height: 2.2;
+		padding: 0 10px 3px 15px;
+
+		@media screen and (min-width: 720px) {
+			font-size: 14px;
+			padding: 0 1px 3px 1px;
+		}
+
+		@media screen and (min-width: 768px) {
+			font-size: 14px;
+		}
+
+		@media screen and (min-width: 960px) {
+			font-size: 16px;
+			padding: 0 10px 3px 15px;
+		}
+
+		@media screen and (min-width: 1050px) {
+			font-size: 18px;
+		}
+
+		&::after {
+			content: "";
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			background: url(img/sprite1.png) no-repeat 1px -82px;
+			position: relative;
+			top: 8px;
+			margin-left: 7px;
+
+			@media screen and (min-width: 720px) {
+				margin-left: 2px;
+				width: 20px;
+				height: 22px;
+				background: url(img/sprite1.png) no-repeat 1px -42px;
+				background-size: 200%; 
+				top: 3px;
+			}
+
+			@media screen and (min-width: 980px) {
+				margin-left: 7px;
+				width: 30px;
+				height: 30px;
+				background: url(img/sprite1.png) no-repeat 1px -82px;
+				top: 8px;
+			}
+		}
+	}
+
+	.com_t1 {
+		background: rgba($colorBG2, .8);
+	}
+
+	.com_t2 {
+		background: rgba($textColor1, .8);
+	}
+
+	.com_t3 {
+		background: rgba($textColorTab, .8);		
+	}
+}
+
+.media_oaks div:nth-child(3n+3) {
+	@media screen and (min-width: 700px) {
+		margin-right: 0;
+	}
+}
+
+
+
+
+
+
+.media_events {
+
+	h2 {
+		text-transform: uppercase;
+		font-size: 22px;
+		text-align: center;
+		color: $colorBG2;
+		padding: 10px 0;
+		margin: 0;
+
+		@media screen and (min-width: 768px) {
+			text-align: left;
+		}
+	}
+
+	li {
+		list-style: none;
+		border-top: 1px solid #d2cdc9;
+	}
+
+}
+
+.event_date {
+	display: inline-block;
+	width: 80px;
+	text-align: center;
+	color: $textColor1;
+	margin: 10px 0;
+
+	.ev_date {
+		font-size: 26px;
+		display: block;
+	}
+
+	.month {
+		font-size: 13px;
+		text-transform: uppercase;
+	}
+}
+
+.name {
+	display: inline-block;
+	line-height: 1.2;
+	vertical-align: top;
+	margin-top: 13px;
+
+	.firstname {
+		display: block;
+		font-size: 16px;
+		color: $textColorTab;
+		text-transform: uppercase;
+	}
+
+	.time {
+		font-size: 12px;
+	}
+}
+
+.media_events a {
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	height: 25px;
+	width: 80px;
+	line-height: 1.8;
+	float: right;
+	background: $colorBG2;
+	@include bor_rad(5px);
+	text-transform: uppercase;
+	color: $colorBG1;
+	margin-top: 18px;
+
+	&:hover {
+		color: $colorBG1;
+		text-decoration: none;
+		background: $textColor1
+	}
+}
+
+.news {
+	margin-bottom: 20px;
+
+	h2 {
+		text-transform: uppercase;
+		font-size: 22px;
+		text-align: center;
+		color: $colorBG2;
+		padding: 10px 0;
+		margin: 0;
+
+		@media screen and (min-width: 768px) {
+			text-align: left;
+		}
+	}
+
+	p {
+		color: $textColor2;
+   		font-size: 14px;
+    	margin-bottom: 12px;
+    	line-height: 1.2;
+
+    	@media screen and (min-width: 768px) {
+			font-size: 16px;
+    		margin-bottom: 14px;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $textColorTab;
+		font-size: 14px;
+		font-weight: bold;
+
+		@media screen and (min-width: 768px) {
+			font-size: 16px;
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: $textColor1;
+		}
+	}
+}
+
+
